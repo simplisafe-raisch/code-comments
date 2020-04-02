@@ -9,28 +9,27 @@ To produce code that can be easily understood by other developers as *quickly as
 
 1. Eschew "magic" constants.
 
-      **Good**:
-      ```
-      const value = db.query('SELECT * FROM users WHERE name = ?', [username])
-      ```
+    **Good**:
+    ```
+    const value = db.query('SELECT * FROM users WHERE name = ?', [username])
+    ```
 
-      **Better**:
-      ```
-      const QUERIES = {
-      userByName: 'SELECT * FROM users WHERE name = ?'
-      }
+    **Better**:
+    ```
+    const QUERIES = {
+    userByName: 'SELECT * FROM users WHERE name = ?'
+    }
+    ...
+    const value = db.query(QUERIES.userByName, [username])
+    ```
 
-      ...
-
-      const value = db.query(QUERIES.userByName, [username])
-       ```
-
-      **Rationale:**
-      Locating constants at the top of the file makes them more accessible, easier to modify, and more understandable.
+    **Rationale:**
+    Locating constants at the top of the file makes them more accessible, easier to modify, and more understandable.
 
 1. Use a formal ordering of required modules to clarify a module's use of resources.
 
   A good pattern to follow is:
+  
     - pragmas
     - debug module
     - node-intrinsic modules
@@ -64,45 +63,45 @@ To produce code that can be easily understood by other developers as *quickly as
   Since `debug` uses minimal resources when not activated by the `DEBUG` environment variable, do not be afraid to use it anywhere there might be a question of what occurs in the code.
 
 1. Gather global constants at the top of the module, directly after requirements.
-```
-  const _ = require('lodash')
+    ```
+    const _ = require('lodash')
 
-  const TRUE = !false
-  const MULTIPLIER = 10
-  const QUERIES = {
+    const TRUE = !false
+    const MULTIPLIER = 10
+    const QUERIES = {
     userByName: 'SELECT * FROM users WHERE name = ?'
-  }
-```
+    }
+    ```
 
 1. Always use `{}` to clarify the code's intent.
 
-  **Good:**
-  ```
-  if(cond) return val
-  ```
+    **Good:**
+    ```
+    if(cond) return val
+    ```
 
-  **Better:**
+    **Better:**
 
-  ```
-  if (cond) {
-    return val
-  }
-  ```
+    ```
+    if (cond) {
+      return val
+    }
+    ```
 
 ---
 ### Best Practices
 
 - **Good:**
-```
-val = getResult()
-if(!val) return false
-return true
-```
+    ```
+    val = getResult()
+    if(!val) return false
+    return true
+    ```
 
 - **Better:**
-```
-    return getResult()
-```
+    ```
+        return getResult()
+    ```
 - **Rationale:**
 
   There are four falsey values in JS: *false*, *0*, *null*, and *undefined*. Everything else is truthy.
