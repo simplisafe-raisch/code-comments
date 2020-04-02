@@ -56,7 +56,7 @@ To produce code that can be easily understood by other developers as *quickly as
      // REST OF CODE
      ```
 
-      Note: While the pragmas are not required, it's a best practice to expressly state all requirements or 'state-changing' values affecting the module.
+      Note: While the pragmas are not required, it's a best practice to explicitly state all requirements or 'state-changing' values affecting the module.
 
 1. Always use `debug` with well thought-out, hierarchically organized tags.
 
