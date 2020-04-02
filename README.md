@@ -9,7 +9,7 @@ To produce code that can be easily understood by other developers as *quickly as
 
 1. Eschew "magic" constants.
 
-  **Good**:
+    **Good**:
   ```
   const value = db.query('SELECT * FROM users WHERE name = ?', [username])
   ```
