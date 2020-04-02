@@ -28,35 +28,35 @@ To produce code that can be easily understood by other developers as *quickly as
 
 1. Use a formal ordering of required modules to clarify a module's use of resources.
 
-  A good pattern to follow is:
-  
-    - pragmas
-    - debug module
-    - node-intrinsic modules
-    - third-party modules
-    - local lib modules
+     A good pattern to follow is:
 
-  <br/>where each section is delimited by a blank line.
+       - pragmas
+       - debug module
+       - node-intrinsic modules
+       - third-party modules
+       - local lib modules
 
-  For example:
-  ```
-  'use strict'   // pragma
+     <br/>where each section is delimited by a blank line.
 
-  /** @module */   // pragma
+     For example:
+     ```
+     'use strict'   // pragma
 
-  const debug = require('debug')('tag, tag:tag, tag:tag:tag')
+     /** @module */   // pragma
 
-  const fs = require('fs')
-  const emitter = require('event')
+     const debug = require('debug')('tag, tag:tag, tag:tag:tag')
 
-  const _ = require('lodash')
+     const fs = require('fs')
+     const emitter = require('event')
 
-  const errorHandler = require('./lib/errorHandler')
+     const _ = require('lodash')
 
-  // REST OF CODE
-  ```
+     const errorHandler = require('./lib/errorHandler')
 
-  Note: While the pragmas are not required, it's a best practice to expressly state all requirements or 'state-changing' values affecting the module.
+     // REST OF CODE
+     ```
+
+      Note: While the pragmas are not required, it's a best practice to expressly state all requirements or 'state-changing' values affecting the module.
 
 1. Always use `debug` with well thought-out, hierarchically organized tags.
 
