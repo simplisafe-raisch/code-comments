@@ -69,7 +69,7 @@ To produce code that can be easily understood by other developers as *quickly as
     const TRUE = !false
     const MULTIPLIER = 10
     const QUERIES = {
-    userByName: 'SELECT * FROM users WHERE name = ?'
+      userByName: 'SELECT * FROM users WHERE name = ?'
     }
     ```
 
