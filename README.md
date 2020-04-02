@@ -9,24 +9,24 @@ To produce code that can be easily understood by other developers as *quickly as
 
 1. Eschew "magic" constants.
 
-    **Good**:
-  ```
-  const value = db.query('SELECT * FROM users WHERE name = ?', [username])
-  ```
+      **Good**:
+      ```
+      const value = db.query('SELECT * FROM users WHERE name = ?', [username])
+      ```
 
-  **Better**:
-  ```
-  const QUERIES = {
-    userByName: 'SELECT * FROM users WHERE name = ?'
-  }
+      **Better**:
+      ```
+      const QUERIES = {
+      userByName: 'SELECT * FROM users WHERE name = ?'
+      }
 
-  ...
+      ...
 
-  const value = db.query(QUERIES.userByName, [username])
-  ```
+      const value = db.query(QUERIES.userByName, [username])
+       ```
 
-  **Rationale:**
-  Locating constants at the top of the file makes them more accessible, easier to modify, and more understandable.
+      **Rationale:**
+      Locating constants at the top of the file makes them more accessible, easier to modify, and more understandable.
 
 1. Use a formal ordering of required modules to clarify a module's use of resources.
 
