@@ -60,7 +60,7 @@ To produce code that can be easily understood by other developers as *quickly as
 
 1. Always use `debug` with well thought-out, hierarchically organized tags.
 
-  Since `debug` uses minimal resources when not activated by the `DEBUG` environment variable, do not be afraid to use it anywhere there might be a question of what occurs in the code.
+     Since `debug` uses minimal resources when not activated by the `DEBUG` environment variable, do not be afraid to use it anywhere there might be a question of what occurs in the code.
 
 1. Gather global constants at the top of the module, directly after requirements.
     ```
