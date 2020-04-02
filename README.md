@@ -17,7 +17,7 @@ To produce code that can be easily understood by other developers as *quickly as
     **Better**:
     ```
     const QUERIES = {
-    userByName: 'SELECT * FROM users WHERE name = ?'
+      userByName: 'SELECT * FROM users WHERE name = ?'
     }
     ...
     const value = db.query(QUERIES.userByName, [username])
@@ -30,11 +30,11 @@ To produce code that can be easily understood by other developers as *quickly as
 
      A good pattern to follow is:
 
-       - pragmas
-       - debug module
-       - node-intrinsic modules
-       - third-party modules
-       - local lib modules
+    - pragmas
+    - debug module
+    - node-intrinsic modules
+    - third-party modules
+    - local lib modules
 
      <br/>where each section is delimited by a blank line.
 
