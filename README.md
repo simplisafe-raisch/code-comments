@@ -1,4 +1,4 @@
-# Code Comments
+# Comments On The Code
 
 ### Goal:
 To produce code that can be easily understood by other developers as *quickly as possible*.
